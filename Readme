@@ -1,0 +1,393 @@
+GrowEasy AI CSV Importer
+
+An AI-powered CSV import application built with Next.js, Express.js, Google Gemini AI, and Docker. The application allows users to upload CRM CSV files, preview the data, intelligently map fields using AI, and generate standardized CRM-ready records.
+
+Features
+Drag & Drop CSV Upload
+CSV Preview with Search
+AI-powered CRM Field Mapping using Google Gemini
+Batch Processing for Large CSV Files
+Interactive Dashboard UI
+Import Summary
+CRM Results Table
+Progress Bar During Processing
+Docker Support
+Responsive Design
+Modern UI with Tailwind CSS
+
+Tech Stack
+
+Frontend
+Next.js 16
+React 19
+Tailwind CSS 4
+Framer Motion
+React Dropzone
+PapaParse
+Axios
+React Hot Toast
+React Icons
+
+Backend
+Node.js
+Express.js
+Multer
+CSV Parser
+Google Gemini AI
+dotenv
+CORS
+
+DevOps
+Docker
+Docker Compose
+
+Project Structure
+
+groweasy/
+│
+├── frontend/
+│   ├── app/
+│   │   ├── components/
+│   │   ├── page.js
+│   │   ├── layout.js
+│   │   └── globals.css
+│   │
+│   ├── public/
+│   ├── package.json
+│   ├── Dockerfile
+│   └── .dockerignore
+│
+├── backend/
+│   ├── controllers/
+│   ├── routes/
+│   ├── services/
+│   ├── uploads/
+│   ├── server.js
+│   ├── package.json
+│   ├── Dockerfile
+│   └── .env
+│
+├── docker-compose.yml
+└── README.md
+
+Supported Features
+CSV Upload
+CSV Preview
+Search Records
+AI Mapping
+Batch Upload
+CRM Summary
+Imported Records
+Skipped Records
+Responsive Layout
+Docker Support
+
+# 🚀 Setup Instructions
+
+## Prerequisites
+
+Make sure the following software is installed:
+
+- Node.js (v22 or later recommended)
+- npm
+- Docker Desktop (optional, for Docker setup)
+- Git
+
+---
+
+# 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/groweasy.git
+
+cd groweasy
+```
+
+---
+
+# 2. Backend Setup
+
+Open a terminal.
+
+```bash
+cd backend
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Create a `.env` file inside the **backend** folder.
+
+```env
+PORT=5000
+
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+```
+
+Start the backend
+
+```bash
+npm run dev
+```
+
+Backend will start on
+
+```
+http://localhost:5000
+```
+
+---
+
+# 3. Frontend Setup
+
+Open another terminal.
+
+```bash
+cd frontend
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Create a `.env.local` file.
+
+```env
+NEXT_PUBLIC_API_URL=http://localhost:5000
+```
+
+Start the frontend
+
+```bash
+npm run dev
+```
+
+Frontend will start on
+
+```
+http://localhost:3000
+```
+
+---
+
+# 4. Running the Project
+
+Open your browser
+
+```
+http://localhost:3000
+```
+
+Upload any CSV file and click **Confirm Import**.
+
+---
+
+# 🐳 Docker Setup
+
+## Prerequisites
+
+- Docker Desktop installed and running
+
+---
+
+### Build Docker Images
+
+```bash
+docker compose build
+```
+
+---
+
+### Start Containers
+
+```bash
+docker compose up
+```
+
+or
+
+```bash
+docker compose up -d
+```
+
+---
+
+### Open Application
+
+Frontend
+
+```
+http://localhost:3000
+```
+
+Backend
+
+```
+http://localhost:5000
+```
+
+---
+
+### Stop Containers
+
+```bash
+docker compose down
+```
+
+---
+
+### Rebuild Containers
+
+```bash
+docker compose down
+
+docker compose up --build
+```
+
+---
+
+# 🔑 Gemini API Key
+
+Generate a Gemini API key from:
+
+https://aistudio.google.com/app/apikey
+
+Add it to
+
+```
+backend/.env
+```
+
+```env
+GEMINI_API_KEY=YOUR_API_KEY
+```
+
+---
+
+# 📦 Install Commands
+
+## Backend
+
+```bash
+cd backend
+
+npm install
+
+npm run dev
+```
+
+## Frontend
+
+```bash
+cd frontend
+
+npm install
+
+npm run dev
+```
+
+---
+
+# 🔧 Useful Docker Commands
+
+Build
+
+```bash
+docker compose build
+```
+
+Start
+
+```bash
+docker compose up
+```
+
+Start in Background
+
+```bash
+docker compose up -d
+```
+
+View Running Containers
+
+```bash
+docker compose ps
+```
+
+View Logs
+
+```bash
+docker compose logs
+```
+
+View Backend Logs
+
+```bash
+docker compose logs backend
+```
+
+View Frontend Logs
+
+```bash
+docker compose logs frontend
+```
+
+Stop Containers
+
+```bash
+docker compose down
+```
+
+Remove Containers and Volumes
+
+```bash
+docker compose down -v
+```
+
+Rebuild Everything
+
+```bash
+docker compose down -v
+
+docker compose build --no-cache
+
+docker compose up
+```
+
+---
+
+# 📁 Environment Variables
+
+### Backend (.env)
+
+```env
+PORT=5000
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+```
+
+### Frontend (.env.local)
+
+```env
+NEXT_PUBLIC_API_URL=http://localhost:5000
+```
+
+---
+
+# ✅ Project URLs
+
+Frontend
+
+```
+http://localhost:3000
+```
+
+Backend
+
+```
+http://localhost:5000
+```
