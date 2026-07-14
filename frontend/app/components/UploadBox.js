@@ -114,7 +114,11 @@ export default function UploadBox() {
 
       console.log(err);
 
-      toast.error("Import Failed");
+      const message =
+      err.response?.data?.message ||
+    "Model is busy.Try again later";
+
+  toast.error(message);
 
     }
 
