@@ -22,6 +22,8 @@ export default function UploadBox() {
   const [crmData, setCrmData] = useState(null);
   const [progress, setProgress] = useState(0);
 
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
   const onDrop = (acceptedFiles) => {
     const csv = acceptedFiles[0];
 
@@ -72,7 +74,7 @@ export default function UploadBox() {
 
         const response = await axios.post(
 
-          "http://localhost:5000/api/upload/import-batch",
+          `${API_URL}/api/upload/import-batch`,
 
           {
             rows: batch
