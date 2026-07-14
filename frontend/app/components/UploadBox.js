@@ -114,11 +114,9 @@ export default function UploadBox() {
 
       console.log(err);
 
-      const message =
-      err.response?.data?.message ||
-    "Model is busy.Try again later";
+      const message = "Model is busy.Try again later";
 
-  toast.error(message);
+      toast.error(message);
 
     }
 
